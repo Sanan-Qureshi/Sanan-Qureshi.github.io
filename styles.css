@@ -24,3 +24,9 @@
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
 
 @media(max-width:760px){.shell{padding:0 20px}.hero{grid-template-columns:1fr;gap:28px;padding:50px 0}.portrait{min-height:300px;max-width:360px}.top-actions a{display:none}.timeline{grid-template-columns:1fr;gap:8px}.story-grid,.story-grid.reverse{grid-template-columns:1fr}.story-grid.reverse .photo{order:0}.awards,.volunteer,.future{grid-template-columns:1fr}.section{padding:55px 0}.section-head{display:block}.section-intro{margin-top:12px}.footer{display:block}.footer span{display:block;margin:8px 0}}
+/* GIKI Competition Photograph */
+.giki-photo img {
+    object-fit: contain;
+    object-position: center;
+    background: var(--soft);
+}
