@@ -1,16 +1,11 @@
-const menuButton = document.querySelector(".menu-toggle");
-const nav = document.querySelector(".nav");
-
-menuButton.addEventListener("click", () => {
-  const isOpen = nav.classList.toggle("open");
-  menuButton.setAttribute("aria-expanded", String(isOpen));
-});
-
-nav.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("open");
-    menuButton.setAttribute("aria-expanded", "false");
+const button=document.querySelector('.menu-toggle');const nav=document.querySelector('.nav');button.addEventListener('click',()=>{const open=nav.classList.toggle('open');button.setAttribute('aria-expanded',String(open));});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');button.setAttribute('aria-expanded','false');}));
+const contactButton = document.querySelector(".reveal-contact");
+const contactEmail = document.querySelector(".contact-email");
+if (contactButton && contactEmail) {
+  contactButton.addEventListener("click", () => {
+    const isVisible = !contactEmail.hidden;
+    contactEmail.hidden = isVisible;
+    contactButton.setAttribute("aria-expanded", String(!isVisible));
+    contactButton.innerHTML = isVisible ? 'Contact <span>↗</span>' : 'Email address <span>↗</span>';
   });
-});
-
-document.getElementById("year").textContent = new Date().getFullYear();
+}
